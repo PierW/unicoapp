@@ -197,3 +197,11 @@ footer .price-footer strong{
     font-size: 22px;
     color: #264193;
 }
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+    body {
+      /* The hack for Safari */
+      height: -webkit-fill-available;
+    }
+}
