@@ -77,7 +77,7 @@
                     Valida fino al:
                 </span>
                 <p class="card__text">
-                    31/01/2023
+                    <span id="date-end"></span>
                 </p>
             </div>
 
@@ -86,13 +86,18 @@
                     Attivato il:
                 </span>
                 <p class="card__text">
-                    04/01/2023 09:50:29
+                    <span id="date-start"></span>
+                    <span>09:50:29</span>
                 </p>
             </div>
 
             <div class="card">
                 <span class="card__label" style="margin-bottom: 0;">
-                    Emesso il: <strong>04/01/2023 09:41</strong>
+                    Emesso il:
+                    <strong>
+                        <span id="date-activated"></span>
+                        <span>09:41</span>
+                    </strong>
                 </span>
             </div>
         </section>
@@ -112,14 +117,22 @@
     <script>
 
             const d = new Date();
+            let year = d.getFullYear(),
+                month = d.getMonth(),
+                humanMonth = (month <= 9) ? '0' + (month + 1) : (month + 1);
+
             let hour = d.getHours();
             let minutes = d.getMinutes();
                 minutes =  minutes <= 9 ? '0' + minutes : minutes;
             let seconds = d.getSeconds();
                 seconds =  seconds <= 9 ? '0' + seconds : seconds;
+
             let time = `${hour}:${minutes}:${seconds}`;
 
             document.getElementById("time").innerHTML = time;
+            document.getElementById('date-end').textContent = `${getLastDay(year, month)}/${humanMonth}/${year}`;
+            document.getElementById('date-start').textContent = `04/${humanMonth}/${year}`;
+            document.getElementById('date-activated').textContent = `04/${humanMonth}/${year}`;
 
         setInterval(function() {
             const d = new Date();
@@ -132,6 +145,11 @@
 
             document.getElementById("time").innerHTML = time;
         }, 1000);
+
+        // Funzione per ricavare l'ultimo giorno del mese.
+        function getLastDay(y,m){
+            return  new Date(y, m +1, 0).getDate();
+        }
 
     </script>
 </body>
