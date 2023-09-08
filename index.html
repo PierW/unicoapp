@@ -109,6 +109,13 @@
             <h5>Prezzo</h5>
             <strong>€81,90</strong>
         </div>
+        <div class="flex details-footer">
+            <img src="./images/logo-unico.jpeg" alt="logo unico" width="100">
+            <strong>
+                #F2AT7D2Y2L<br/>
+                #8509/263447
+            </strong>
+        </div>
         <p>
             L'abbonamento va attivato entro il giorno 15 del mese di utilizzo. Valido fino alle ore 24:00 dell'ultimo giorno del mese solare di attivazione.
         </p>
@@ -131,8 +138,8 @@
 
             document.getElementById("time").innerHTML = time;
             document.getElementById('date-end').textContent = `${getLastDay(year, month)}/${humanMonth}/${year}`;
-            document.getElementById('date-start').textContent = `02/${humanMonth}/${year}`;
-            document.getElementById('date-activated').textContent = `02/${humanMonth}/${year}`;
+            document.getElementById('date-start').textContent = `01/${humanMonth}/${year}`;
+            document.getElementById('date-activated').textContent = `01/${humanMonth}/${year}`;
 
         setInterval(function() {
             const d = new Date();

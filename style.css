@@ -54,7 +54,7 @@ header{
 }
 
 .box{
-    margin:  10px;
+    margin:  15px;
     border-radius: 8px;
     padding: 15px;
     -webkit-box-shadow: 0px 0px 16px 0px rgba(168,168,168,1);
@@ -136,11 +136,13 @@ header{
 section.loader video{
     height: 70px;
     width: 100%;
+    padding: 0 10px;
+    margin-top: -5px;
 }
 
 .loader__title,
 .loader__par{
-    margin: 10px;
+    margin: 15px;
 }
 
 .loader__title{
@@ -153,13 +155,12 @@ section.loader video{
 
 .loader__par{
     font-weight: 300;
-    margin-bottom: 15px;
 }
 
 .card{
     background-color: #ececec;
     border-radius: 8px;
-    margin: 10px;
+    margin: 15px;
     padding: 10px 15px;
 }
 
@@ -179,14 +180,23 @@ section.loader video{
 }
 
 footer{
-    margin: 10px;
+    margin: 15px;
 }
 
-footer .price-footer{
+footer .price-footer,
+footer .details-footer{
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+}
+
+footer .details-footer > img{
+    margin-left: 15px;
+}
+
+footer .details-footer > strong{
+    font-size: 18px;
 }
 
 footer .price-footer h5{
