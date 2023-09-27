@@ -1,0 +1,15 @@
+{
+    "name" : "UnicoCampania",
+    "short_name" : "Unico",
+    "start_url" : "/unicoapp/",
+    "background_color" : "#fff",
+    "theme_color" : "#264193",
+    "display" : "standalone",
+    "icons" : [
+        {
+            "src" : "./apple-touch-icon.png",
+            "sizes" : "246x246",
+            "type" : "image/png"
+        }
+    ]
+}
