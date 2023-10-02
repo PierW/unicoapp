@@ -128,7 +128,7 @@
             const d = new Date();
             let year = d.getFullYear(),
                 month = d.getMonth(),
-                humanMonth = (month <= 9) ? '0' + (month + 1) : (month + 1);
+                humanMonth = (month < 9) ? '0' + (month + 1) : (month + 1);
 
             let hour = d.getHours();
             let minutes = d.getMinutes();
