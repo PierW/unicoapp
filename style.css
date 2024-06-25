@@ -136,8 +136,8 @@ header{
 section.loader video{
     height: 70px;
     width: 100%;
-    padding: 0 10px;
-    margin-top: -5px;
+    padding: 0 15px;
+    margin-top: 0;
 }
 
 .loader__title,
@@ -147,10 +147,10 @@ section.loader video{
 
 .loader__title{
     text-transform: uppercase;
-    color: #242850;
+    color: #124bfc;
     font-size: 20px;
     font-weight: 600;
-    margin-top: 0;
+    margin-top: -5px;
 }
 
 .loader__par{
