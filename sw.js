@@ -13,7 +13,7 @@ self.addEventListener("install", e =>{
                 "./images/zoom-in.png",
                 "./images/login.png",
                 "./images/logo-unico.jpeg",
-                "./videos/loader.mp4",
+                "./videos/loader2.mp4",
             ])
         })
     );
