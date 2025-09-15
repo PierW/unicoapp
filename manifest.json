@@ -7,8 +7,8 @@
     "display" : "standalone",
     "icons" : [
         {
-            "src" : "./apple-touch-icon.webp",
-            "sizes" : "246x246",
+            "src" : "./apple-touch-icon.png",
+            "sizes" : "434x434",
             "type" : "image/png"
         }
     ]
