@@ -8,7 +8,7 @@
     <title>UnicoCampania</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -166,9 +166,49 @@
             navigator.serviceWorker.register("sw.js").then(registration => {
                 console.log("SW Registered");
                 console.log(registration);
+
+                // Rileva aggiornamenti
+                registration.onupdatefound = () => {
+                    const newSW = registration.installing;
+                    newSW.onstatechange = () => {
+                        if (newSW.state === "installed" && navigator.serviceWorker.controller) {
+                            // Mostra un banner per aggiornare
+                            const banner = document.createElement("div");
+                            banner.style.position = "fixed";
+                            banner.style.bottom = "0";
+                            banner.style.left = "0";
+                            banner.style.width = "100%";
+                            banner.style.background = "#264193";
+                            banner.style.color = "#fff";
+                            banner.style.padding = "16px";
+                            banner.style.textAlign = "center";
+                            banner.style.zIndex = "9999";
+                            banner.innerHTML = `
+                                Nuova versione disponibile!
+                                <button id="reload-btn" style="margin-left:10px;padding:6px 12px;background:#fff;color:#264193;border:none;border-radius:4px;cursor:pointer;">
+                                    Aggiorna
+                                </button>
+                            `;
+                            document.body.appendChild(banner);
+
+                            document.getElementById("reload-btn").onclick = () => {
+                                if (registration.waiting) {
+                                    registration.waiting.postMessage("SKIP_WAITING");
+                                }
+                                window.location.reload();
+                            };
+                        }
+                    };
+                };
+
             }).catch(error => {
                 console.log("Registrazione SW fallita");
                 console.log(error);
+            });
+
+            // Ascolta il messaggio dal SW per skipWaiting
+            navigator.serviceWorker.addEventListener("controllerchange", () => {
+                window.location.reload();
             });
         }
 
