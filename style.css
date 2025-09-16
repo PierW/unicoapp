@@ -111,6 +111,7 @@ header{
 
 .loader{
     margin-top: -19px;
+    overflow: hidden;
 }
 
 .qr-code{
@@ -153,9 +154,8 @@ section.loader video{
     width: calc(100% + 12px);
     margin-top: 0;
     margin-left: -6px;
+    transform: scale(1.2);
 }
-
-
 
 .card{
     background-color: #ececec;
@@ -170,12 +170,20 @@ section.loader video{
 }
 
 .card__text{
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .card--green{
-    background-color: #51c79c;
+    background-color:#469653;
     color: #fff;
+}
+
+.date-emission{
+    font-size: 14px;
+}
+
+.date-emission strong{
+    font-weight: 700;
 }
 
 footer{
