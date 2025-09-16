@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     background-color: #469653;
 }
 
@@ -73,7 +73,7 @@ header{
     color: #000;
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 15px;
 }
 
