@@ -25,79 +25,81 @@
     </header>
 
     <main>
-
         <div class="box">
-            <img src="./images/logo-unico.jpeg" alt="logo unico" width="50">
-            <h3 class="box__title">
-                Controllo e validazione
-                <div class="arrow-right">
-                    <span class="img-arrow-right"></span>
+
+            <div class="box__pre-header">
+                <img src="./images/logo-unico.jpeg" class="logo-unico" alt="logo unico" width="50">
+                <h2 class="box__title">
+                    unico - na4 mensile integrato
+                </h2>
+                <p class="box__par">
+                    L'abbonamento va attivato entro il giorno 15 del mese di utilizzo. Valido fino alle ore 24:00 dell'ultimo giorno del mese solare di attivazione.
+                </p>
+            </div>
+
+            <div class="box box--secondary">
+                <h3 class="box__title box__title--secondary">
+                    Controllo e validazione
+                    <div class="arrow-right">
+                        <span class="img-arrow-right"></span>
+                    </div>
+                </h3>
+                <div class="qr-code">
+                    <img src="./images/qrcode.png" height="180" alt="qrcode" alt="qrcode">
                 </div>
-            </h3>
-            <div class="qr-code">
-                <img src="./images/qrcode.png" height="180" alt="qrcode" alt="qrcode">
+                <div class="flex time-check">
+                    <span id="time"></span>
+                    <span id="code-validation">930</span>
+                </div>
             </div>
-            <p class="open-qrcode">
-                <img src="./images/zoom-in.png" height="18" alt="zoom-in">
-                Apri Qr Code
-            </p>
-            <div class="flex time-check">
-                <span id="time"></span>
-                <span id="code-validation">930</span>
-            </div>
+
+            <section class="loader">
+                <video autoplay muted playsinline loop>
+                    <source src="./videos/loader.mp4" type="video/mp4">
+                </video>
+            </section>
+
+            <section class="cards">
+                <div class="card">
+                    <span class="card__label">
+                        Tratta:
+                    </span>
+                    <p class="card__text">
+                        Da CASERTA a NAPOLI
+                    </p>
+                </div>
+
+                <div class="card card--green">
+                    <span class="card__label" style="margin-bottom: 0;">
+                        Valida fino al:
+                    </span>
+                    <p class="card__text">
+                        <span id="date-end"></span>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card__label">
+                        Attivato il:
+                    </span>
+                    <p class="card__text">
+                        <span id="date-start"></span>
+                        <span>09:50:29</span>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card__label" style="margin-bottom: 0;">
+                        Emesso il:
+                        <strong>
+                            <span id="date-activated"></span>
+                            <span>09:41</span>
+                        </strong>
+                    </span>
+                </div>
+            </section>
         </div>
 
-        <section class="loader">
-            <video autoplay muted playsinline loop>
-                <source src="./videos/loader.mp4" type="video/mp4">
-            </video>
-            <h2 class="loader__title">
-                unico - na4 mensile integrato
-            </h2>
-            <p class="loader__par">
-                L'abbonamento va attivato entro il giorno 15 del mese di utilizzo. Valido fino alle ore 24:00 dell'ultimo giorno del mese solare di attivazione.
-            </p>
-        </section>
-
-        <section class="cards">
-            <div class="card">
-                <span class="card__label">
-                    Tratta:
-                </span>
-                <p class="card__text">
-                    Da CASERTA a NAPOLI
-                </p>
-            </div>
-
-            <div class="card card--green">
-                <span class="card__label" style="margin-bottom: 0;">
-                    Valida fino al:
-                </span>
-                <p class="card__text">
-                    <span id="date-end"></span>
-                </p>
-            </div>
-
-            <div class="card">
-                <span class="card__label">
-                    Attivato il:
-                </span>
-                <p class="card__text">
-                    <span id="date-start"></span>
-                    <span>09:50:29</span>
-                </p>
-            </div>
-
-            <div class="card">
-                <span class="card__label" style="margin-bottom: 0;">
-                    Emesso il:
-                    <strong>
-                        <span id="date-activated"></span>
-                        <span>09:41</span>
-                    </strong>
-                </span>
-            </div>
-        </section>
 
     </main>
 
