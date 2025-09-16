@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #448e50;
 }
 
 header{
@@ -64,7 +65,7 @@ header{
 
 .box__title{
     position: relative;
-    color: #264193;
+    color: #000;
 }
 
 .box__title .arrow-right{
@@ -147,7 +148,7 @@ section.loader video{
 
 .loader__title{
     text-transform: uppercase;
-    color: #124bfc;
+    color: #000;
     font-size: 20px;
     font-weight: 600;
     margin-top: -5px;
