@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-v1.0.8"; // Cambia versione ad ogni release per mostrare messaggio banner per aggiornare la PWA
+const CACHE_NAME = "static-v1.0.9"; // Cambia versione ad ogni release per mostrare messaggio banner per aggiornare la PWA
 
 self.addEventListener("install", e =>{
     e.waitUntil(
