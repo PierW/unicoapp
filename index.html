@@ -169,24 +169,50 @@
                     const newSW = registration.installing;
                     newSW.onstatechange = () => {
                         if (newSW.state === "installed" && navigator.serviceWorker.controller) {
-                            // Mostra un banner per aggiornare
-                            const banner = document.createElement("div");
-                            banner.style.position = "fixed";
-                            banner.style.bottom = "0";
-                            banner.style.left = "0";
-                            banner.style.width = "100%";
-                            banner.style.background = "#264193";
-                            banner.style.color = "#fff";
-                            banner.style.padding = "16px";
-                            banner.style.textAlign = "center";
-                            banner.style.zIndex = "9999";
-                            banner.innerHTML = `
-                                Nuova versione disponibile!
-                                <button id="reload-btn" style="margin-left:10px;padding:6px 12px;background:#fff;color:#264193;border:none;border-radius:4px;cursor:pointer;">
-                                    Aggiorna
-                                </button>
+                            // Disabilita lo scroll del body
+                            document.body.style.overflow = "hidden";
+
+                            // Crea overlay scuro trasparente
+                            const overlay = document.createElement("div");
+                            overlay.style.position = "fixed";
+                            overlay.style.top = "0";
+                            overlay.style.left = "0";
+                            overlay.style.width = "100%";
+                            overlay.style.height = "100%";
+                            overlay.style.background = "rgba(0, 0, 0, 0.4)";
+                            overlay.style.display = "flex";
+                            overlay.style.justifyContent = "center";
+                            overlay.style.alignItems = "center";
+                            overlay.style.zIndex = "9999";
+
+                            // Crea popup stile iOS
+                            const modal = document.createElement("div");
+                            modal.style.background = "#f2f2f7";
+                            modal.style.color = "#000";
+                            modal.style.padding = "20px";
+                            modal.style.borderRadius = "20px";
+                            modal.style.boxShadow = "0 4px 20px rgba(0,0,0,0.3)";
+                            modal.style.maxWidth = "300px";
+                            modal.style.textAlign = "center";
+                            modal.style.fontFamily = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen";
+
+                            modal.innerHTML = `
+                                <div style="font-size:17px; font-weight:600; margin-bottom:10px;">Nuova versione</div>
+                                <div style="font-size:15px; margin-bottom:20px;">È disponibile un aggiornamento dell'app.</div>
+                                <button id="reload-btn" style="
+                                    width: 100%;
+                                    padding: 10px;
+                                    background: #007aff;
+                                    color: white;
+                                    border: none;
+                                    border-radius: 12px;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                ">Aggiorna</button>
                             `;
-                            document.body.appendChild(banner);
+
+                            overlay.appendChild(modal);
+                            document.body.appendChild(overlay);
 
                             document.getElementById("reload-btn").onclick = () => {
                                 if (registration.waiting) {
@@ -195,6 +221,7 @@
                                 window.location.reload();
                             };
                         }
+
                     };
                 };
 
