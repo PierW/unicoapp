@@ -6,12 +6,11 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #448e50;
+    background-color: #469653;
 }
 
 header{
     height: 50px;
-    background-color: #264193;
     color: #fff;
     display: flex;
     align-items: center;
@@ -24,8 +23,8 @@ header{
 }
 
 .nav__title{
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
     flex-basis: 60%;
     text-align: center;
 }
@@ -46,21 +45,15 @@ header{
     text-align: right;
 }
 
-.title-active{
-    background-color: #51c79c;
-    padding: 15px;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase
+.logo-unico{
+    margin-left: 10px;
 }
 
 .box{
     margin:  15px;
     border-radius: 8px;
+    background-color: #fff;
     padding: 15px;
-    -webkit-box-shadow: 0px 0px 16px 0px rgba(168,168,168,1);
-    -moz-box-shadow: 0px 0px 16px 0px rgba(168,168,168,1);
-    box-shadow: 0px 0px 16px 0px rgba(168,168,168,1);
 }
 
 .box__title{
@@ -190,10 +183,6 @@ footer .details-footer{
     align-items: center;
     margin-top: 25px;
     margin-bottom: 25px;
-}
-
-footer .details-footer > img{
-    margin-left: 15px;
 }
 
 footer .details-footer > strong{

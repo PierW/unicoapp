@@ -3,7 +3,7 @@
     "short_name" : "UnicoCampania",
     "start_url" : "/unicoapp/",
     "background_color" : "#fff",
-    "theme_color" : "#448e50",
+    "theme_color" : "#469653",
     "display" : "standalone",
     "icons" : [
         {
