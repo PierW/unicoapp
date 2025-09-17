@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Rubik', sans-serif;
-    background-color: #469653;
+    background-color: rgb(71, 154, 102);
 }
 
 header{
@@ -19,7 +19,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #469653;
+    background: rgb(71, 154, 102);
 }
 
 main{
@@ -129,9 +129,19 @@ main{
 }
 
 .time-check{
+    color: #003366;
     margin-top: 20px;
     margin-bottom: 25px;
     justify-content: space-between;
+}
+
+.time-check #time{
+    font-weight: 500;
+}
+
+.time-check #code-validation{
+    font-weight: 500;
+    font-size: 14px;
 }
 
 #time:before{
@@ -182,7 +192,7 @@ section.loader video{
 }
 
 .card--green{
-    background-color:#469653;
+    background-color:rgb(71, 154, 102);
     color: #fff;
 }
 
@@ -199,25 +209,43 @@ section.loader video{
 }
 
 .accordion p{
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 300;
     font-size: 14px;
-    margin-top: 20px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.accordion p.open{
+    margin-bottom: 20px;
 }
 
 .accordion__title{
+    font-size: 14px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .arrow-accordion{
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-block;
-    /* transform: rotate(90deg); */
-    transform: rotate(270deg); /* Chiuso */
+    transform: rotate(-90deg);
     height: 17px;
     width: 15px;
 }
 
+.arrow-accordion.open-arrow {
+    transform: rotate(90deg);
+}
+
+.accordion__read-all{
+    color: #003366;
+}
+
 .img-arrow-accordion{
+    vertical-align: middle;
     mask-image: url(./images/left-arrow.png);
     -webkit-mask-image: url(./images/left-arrow.png);
     background-color: #000000;
@@ -233,28 +261,32 @@ section.loader video{
 .details-footer{
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.details-footer + .details-footer{
+    margin-top: 20px;
 }
 
 .price-footer{
     padding-bottom: 8px;
+    margin-top: 20px;
     border-bottom: 1px solid #e4e4e4;
 }
 
 .details-footer{
     font-weight: 300;
     font-size: 13px;
-    color: #8f8f8f;
+    color: #676767;
 }
 
 .price-footer h5{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
 }
 
 .price-footer strong{
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#469653">
+    <meta name="theme-color" content="rgb(71, 154, 102)">
     <title>UnicoCampania</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="manifest" href="manifest.json">
@@ -107,8 +107,10 @@
                     <strong>
                         Dettagli
                     </strong>
-                    <strong>
-                        Leggi Tutto
+                    <strong id="toggle-accordion">
+                        <span class="accordion__read-all">
+                            Leggi Tutto
+                        </span>
                         <span class="arrow-accordion">
                             <span class="img-arrow-accordion"></span>
                         </span>
@@ -180,6 +182,25 @@
         function getLastDay(y,m){
             return  new Date(y, m +1, 0).getDate();
         }
+
+
+        // Funzione per toggle accordion.
+        const toggle = document.getElementById("toggle-accordion");
+        const accordion = toggle.closest(".accordion");
+        const content = accordion.querySelector("p");
+        const arrow = toggle.querySelector(".arrow-accordion");
+
+        toggle.addEventListener("click", function() {
+            if (content.classList.contains("open")) {
+                content.style.height = "0";
+                content.classList.remove("open");
+                arrow.classList.remove("open-arrow");
+            } else {
+                content.style.height = content.scrollHeight + "px";
+                content.classList.add("open");
+                arrow.classList.add("open-arrow");
+            }
+        });
 
 
         // Registro Service Worker
