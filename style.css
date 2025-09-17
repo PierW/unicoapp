@@ -16,6 +16,14 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #469653;
+}
+
+main{
+    padding-bottom: 80px;
 }
 
 .flex{
@@ -115,13 +123,14 @@ header{
 }
 
 .qr-code{
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 5px;
     text-align: center;
 }
 
 .time-check{
     margin-top: 20px;
+    margin-bottom: 25px;
     justify-content: space-between;
 }
 
@@ -152,9 +161,9 @@ header{
 section.loader video{
     height: 70px;
     width: calc(100% + 12px);
-    margin-top: 0;
+    margin-top: 4px;
     margin-left: -6px;
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 .card{
@@ -186,27 +195,32 @@ section.loader video{
     font-weight: 700;
 }
 
-footer{
-    margin: 15px;
-}
-
-footer .price-footer,
-footer .details-footer{
+.price-footer,
+.details-footer{
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
-footer .details-footer > strong{
+.details-footer > strong{
     font-size: 18px;
 }
 
-footer .price-footer h5{
+.price-footer h5{
     font-size: 16px;
 }
 
-footer .price-footer strong{
+.price-footer strong{
     font-size: 22px;
     color: #264193;
+}
+
+footer{
+    background-color: #fff;
+    min-height: 70px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
