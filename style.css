@@ -174,7 +174,6 @@ section.loader video{
 
 .card__label{
     display: inline-block;
-    margin-bottom: 10px;
     font-weight: 300;
 }
 
@@ -187,6 +186,10 @@ section.loader video{
     color: #fff;
 }
 
+.date-emission-container{
+    margin-top: 10px;
+}
+
 .date-emission{
     font-size: 14px;
 }
@@ -195,25 +198,64 @@ section.loader video{
     font-weight: 700;
 }
 
+.accordion p{
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.accordion__title{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-accordion{
+    display: inline-block;
+    /* transform: rotate(90deg); */
+    transform: rotate(270deg); /* Chiuso */
+    height: 17px;
+    width: 15px;
+}
+
+.img-arrow-accordion{
+    mask-image: url(./images/left-arrow.png);
+    -webkit-mask-image: url(./images/left-arrow.png);
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    -webkit-mask-size: 12px;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 50%;
+}
+
 .price-footer,
 .details-footer{
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.details-footer > strong{
-    font-size: 18px;
+.price-footer{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.details-footer{
+    font-weight: 300;
+    font-size: 13px;
+    color: #8f8f8f;
 }
 
 .price-footer h5{
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .price-footer strong{
-    font-size: 22px;
-    color: #264193;
+    font-size: 20px;
+    color: #000;
 }
 
 footer{
