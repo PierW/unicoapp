@@ -136,6 +136,7 @@ main{
 }
 
 .time-check #time{
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -147,8 +148,8 @@ main{
 #time:before{
     content: "";
     display: inline-block;
-    height: 19px;
-    width: 19px;
+    height: 24px;
+    width: 20px;
     background-image: url(./images/time.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -159,13 +160,25 @@ main{
 #code-validation:before{
     content: "";
     display: inline-block;
-    height: 20px;
-    width: 30px;
+    height: 16px;
+    width: 18px;
     background-image: url(./images/crypt.png);
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 2px;
     vertical-align: top;
+}
+
+.box__title.box__title--secondary:before{
+    content: "";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url(./images/ticket.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 section.loader video{

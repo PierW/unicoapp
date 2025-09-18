@@ -169,7 +169,7 @@
             const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
             const diffHours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const diffMinutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById('date-end').textContent = `${diffDays} gg, ${diffHours} h, ${diffMinutes} min`;
+            document.getElementById('date-end').textContent = `${diffDays} gg ${diffHours} h ${diffMinutes} min`;
             //document.getElementById('date-end').textContent = `${getLastDay(year, month)}/${humanMonth}/${year}`;
             
             document.getElementById('date-start').textContent = `01/${humanMonth}/${year}`;

@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-v1.1.5"; // Cambia versione ad ogni release per mostrare messaggio banner per aggiornare la PWA
+const CACHE_NAME = "static-v1.1.6"; // Cambia versione ad ogni release per mostrare messaggio banner per aggiornare la PWA
 
 self.addEventListener("install", e =>{
     e.waitUntil(
@@ -7,13 +7,11 @@ self.addEventListener("install", e =>{
                 "./",
                 "./style.css",
                 "./apple-touch-icon.png",
+                "./images/ticket.png",
                 "./images/left-arrow.png",
-                "./images/home.png",
                 "./images/crypt.png",
                 "./images/qrcode.png",
                 "./images/time.png",
-                "./images/zoom-in.png",
-                "./images/login.png",
                 "./images/logo-unico.jpeg",
                 "./videos/loader.mp4",
             ])
